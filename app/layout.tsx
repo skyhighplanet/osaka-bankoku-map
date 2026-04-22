@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "大阪くいだおれMAP",
-  description: "大阪グルメ投稿まとめマップ。X投稿者のおすすめ店をマップで探して予約できます。",
+  title: "大阪くいだおれマップ | 大阪グルメ投稿まとめ",
+  description: "大阪市内のグルメレポーターが紹介する飲食店を地図で探せるサイト。X投稿からおすすめ店を見つけてそのまま予約できます。",
 };
 
 export default function RootLayout({
