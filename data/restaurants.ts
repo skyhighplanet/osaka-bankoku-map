@@ -86,6 +86,26 @@ export const restaurants: Restaurant[] = [
     ikyuUrl: "",
   },
 
+  // --- @cafe__xx__ ---
+  {
+    id: "cx-1",
+    name: "余白 (yohaku)",
+    area: "中央区（本町）",
+    category: "カフェ",
+    lat: 34.681283,
+    lng: 135.502693,
+    posts: [
+      {
+        tweetUrl: "https://x.com/cafe__xx__/status/2046505421276676099",
+        posterName: "𝓜",
+        posterHandle: "@cafe__xx__",
+      },
+    ],
+    gurunaviUrl: "",
+    hotpepperUrl: "",
+    ikyuUrl: "",
+  },
+
   // --- @crew_value1 ---
   {
     id: "cv-1",
