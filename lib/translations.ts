@@ -39,6 +39,7 @@ export const countryFlags: Record<string, string> = {
   "エチオピア": "🇪🇹",
   "ペルー": "🇵🇪",
   "エジプト": "🇪🇬",
+  "ベルギー": "🇧🇪",
 };
 
 export const countryTranslations: Record<string, string> = {
@@ -59,6 +60,7 @@ export const countryTranslations: Record<string, string> = {
   "エチオピア": "Ethiopian",
   "ペルー": "Peruvian",
   "エジプト": "Egyptian",
+  "ベルギー": "Belgian",
 };
 
 export const areaTranslations: Record<string, string> = {

@@ -38,4 +38,23 @@ export const restaurants: Restaurant[] = [
     hotpepperUrl: "",
     ikyuUrl: "",
   },
+  {
+    id: "rm-1",
+    name: "Belgian Pub Antwerp Six",
+    area: "北区（梅田）",
+    country: "ベルギー",
+    category: "ベルギー料理",
+    lat: 34.7024,
+    lng: 135.4976,
+    posts: [
+      {
+        tweetUrl: "https://x.com/rurumyaku/status/2046790035572490727",
+        posterName: "るるミャク",
+        posterHandle: "@rurumyaku",
+      },
+    ],
+    gurunaviUrl: "",
+    hotpepperUrl: "",
+    ikyuUrl: "",
+  },
 ];
