@@ -86,6 +86,26 @@ export const restaurants: Restaurant[] = [
     ikyuUrl: "",
   },
 
+  // --- @crew_value1 ---
+  {
+    id: "cv-1",
+    name: "萬珉",
+    area: "東住吉区（駒川中野）",
+    category: "中華",
+    lat: 34.623933,
+    lng: 135.539576,
+    posts: [
+      {
+        tweetUrl: "https://x.com/crew_value1/status/2046530169318633626",
+        posterName: "crew_value1",
+        posterHandle: "@crew_value1",
+      },
+    ],
+    gurunaviUrl: "",
+    hotpepperUrl: "",
+    ikyuUrl: "",
+  },
+
   // --- @furan_osakacafe ---
   {
     id: "fc-1",
