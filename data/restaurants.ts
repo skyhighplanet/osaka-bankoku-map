@@ -2,7 +2,8 @@ export type Restaurant = {
   id: string;
   name: string;
   area: string;
-  category: string; // 例: "ラーメン" | "カフェ" | "イタリアン" など
+  country: string; // 料理の出身国（例: "日本" | "イタリア" | "中国" など）
+  category: string; // 料理種別（例: "ラーメン" | "カフェ" | "イタリアン" など）
   lat: number;
   lng: number;
   posts: Post[];
@@ -24,13 +25,13 @@ export const POSTERS = [
   { handle: "@furan_osakacafe", url: "https://x.com/furan_osakacafe" },
 ];
 
-// ★ 実際の投稿URLと店舗情報をここに登録してください
 export const restaurants: Restaurant[] = [
   // --- @osaka_gourmet_ ---
   {
     id: "og-1",
     name: "生ハムとPIZZA。86ストア",
     area: "中央区（難波）",
+    country: "イタリア",
     category: "イタリアン",
     lat: 34.6652,
     lng: 135.5020,
@@ -51,6 +52,7 @@ export const restaurants: Restaurant[] = [
     id: "mg-1",
     name: "中華そば桐麺 総本店",
     area: "淀川区（十三）",
+    country: "日本",
     category: "ラーメン",
     lat: 34.7224,
     lng: 135.4698,
@@ -71,6 +73,7 @@ export const restaurants: Restaurant[] = [
     id: "og-2",
     name: "自然派ワインBAR PASSE",
     area: "西区（阿波座）",
+    country: "フランス",
     category: "ワインバー",
     lat: 34.683762,
     lng: 135.484676,
@@ -91,6 +94,7 @@ export const restaurants: Restaurant[] = [
     id: "tc-1",
     name: "またぐ",
     area: "西区（西大橋）",
+    country: "日本",
     category: "創作料理",
     lat: 34.678904,
     lng: 135.495336,
@@ -111,6 +115,7 @@ export const restaurants: Restaurant[] = [
     id: "em-1",
     name: "422 BOOKCAFE & BAR",
     area: "中央区（本町）",
+    country: "日本",
     category: "カフェ",
     lat: 34.686749,
     lng: 135.499560,
@@ -131,6 +136,7 @@ export const restaurants: Restaurant[] = [
     id: "hg-1",
     name: "北新地ひなべ ぺんぎん",
     area: "北区（北新地）",
+    country: "中国",
     category: "火鍋",
     lat: 34.696379,
     lng: 135.498201,
@@ -151,6 +157,7 @@ export const restaurants: Restaurant[] = [
     id: "kg-1",
     name: "酒場音色",
     area: "中央区（心斎橋）",
+    country: "日本",
     category: "居酒屋",
     lat: 34.672264,
     lng: 135.501822,
@@ -171,6 +178,7 @@ export const restaurants: Restaurant[] = [
     id: "ume-1",
     name: "発酵旬菜 もろみ庵",
     area: "福島区（福島）",
+    country: "日本",
     category: "居酒屋",
     lat: 34.697285,
     lng: 135.486360,
@@ -191,6 +199,7 @@ export const restaurants: Restaurant[] = [
     id: "cv-2",
     name: "あべの酒場",
     area: "阿倍野区（天王寺）",
+    country: "日本",
     category: "居酒屋",
     lat: 34.646517,
     lng: 135.510906,
@@ -211,6 +220,7 @@ export const restaurants: Restaurant[] = [
     id: "cx-1",
     name: "余白 (yohaku)",
     area: "中央区（本町）",
+    country: "日本",
     category: "カフェ",
     lat: 34.681283,
     lng: 135.502693,
@@ -231,6 +241,7 @@ export const restaurants: Restaurant[] = [
     id: "cv-1",
     name: "萬珉",
     area: "東住吉区（駒川中野）",
+    country: "中国",
     category: "中華",
     lat: 34.623933,
     lng: 135.539576,
@@ -251,6 +262,7 @@ export const restaurants: Restaurant[] = [
     id: "yk-1",
     name: "291010（にくじゅうじゅう）",
     area: "北区（天満）",
+    country: "韓国",
     category: "焼肉",
     lat: 34.70648,
     lng: 135.509424,
@@ -271,6 +283,7 @@ export const restaurants: Restaurant[] = [
     id: "fc-1",
     name: "Hobbit's Tea Room",
     area: "中央区（大手前）",
+    country: "イギリス",
     category: "カフェ",
     lat: 34.6868,
     lng: 135.5196,

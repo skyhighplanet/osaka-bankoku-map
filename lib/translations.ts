@@ -2,36 +2,42 @@ export type Language = "ja" | "en";
 
 export const translations = {
   ja: {
-    siteTitle: "大阪くいだおれマップ",
+    siteTitle: "大阪万国食堂マップ",
     tagline: "ピンをタップして詳細を見る",
     areaLabel: "エリア",
-    categoryLabel: "種別",
+    countryLabel: "国名",
     all: "すべて",
     reservation: "予約はこちら",
     reservationPending: "予約リンク準備中",
   },
   en: {
-    siteTitle: "Osaka Kuidaore MAP",
+    siteTitle: "Osaka World Kitchen MAP",
     tagline: "Tap a pin to see details",
     areaLabel: "Area",
-    categoryLabel: "Category",
+    countryLabel: "Cuisine",
     all: "All",
     reservation: "Make a Reservation",
     reservationPending: "Reservation links coming soon",
   },
 } as const;
 
-export const categoryTranslations: Record<string, string> = {
-  "イタリアン": "Italian",
-  "ラーメン": "Ramen",
-  "カフェ": "Cafe",
-  "ワインバー": "Wine Bar",
-  "中華": "Chinese",
-  "創作料理": "Creative Cuisine",
-  "火鍋": "Hot Pot",
-  "居酒屋": "Izakaya",
-  "焼肉": "Yakiniku",
-  "ブックカフェ": "Book Cafe",
+export const countryTranslations: Record<string, string> = {
+  "日本": "Japanese",
+  "中国": "Chinese",
+  "韓国": "Korean",
+  "イタリア": "Italian",
+  "フランス": "French",
+  "イギリス": "British",
+  "アメリカ": "American",
+  "インド": "Indian",
+  "タイ": "Thai",
+  "ベトナム": "Vietnamese",
+  "メキシコ": "Mexican",
+  "スペイン": "Spanish",
+  "ギリシャ": "Greek",
+  "トルコ": "Turkish",
+  "エチオピア": "Ethiopian",
+  "ペルー": "Peruvian",
 };
 
 export const areaTranslations: Record<string, string> = {

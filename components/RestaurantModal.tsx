@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { Restaurant } from "@/data/restaurants";
 import { useLang } from "@/lib/LanguageContext";
-import { translations, areaTranslations } from "@/lib/translations";
+import { translations, areaTranslations, countryTranslations } from "@/lib/translations";
 
 type Props = {
   restaurant: Restaurant;
@@ -103,6 +103,9 @@ export default function RestaurantModal({ restaurant, onClose }: Props) {
             <h2 className="font-bold text-lg leading-tight">{restaurant.name}</h2>
             <p className="text-sm text-gray-500">
               {lang === "en" ? (areaTranslations[restaurant.area] ?? restaurant.area) : restaurant.area}
+            </p>
+            <p className="text-xs text-blue-600 font-medium mt-0.5">
+              {lang === "en" ? (countryTranslations[restaurant.country] ?? restaurant.country) : restaurant.country}
             </p>
           </div>
           <button

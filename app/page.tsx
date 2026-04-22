@@ -6,11 +6,11 @@ import Header from "@/components/Header";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "大阪くいだおれマップ",
-  url: "https://osaka-kuidaore-map.skyhighplanet.workers.dev",
-  description: "大阪のグルメレポーターがXで紹介する飲食店を地図でまとめて探せるサイト。カフェ・ラーメン・居酒屋・焼肉など大阪各エリアのおすすめグルメ情報を掲載。",
+  name: "大阪万国食堂マップ",
+  url: "https://osaka-bankoku-map.skyhighplanet.workers.dev",
+  description: "大阪市内で食べられる各国料理の飲食店を地図でまとめて探せるサイト。イタリアン・中華・韓国料理・フランス料理など国名とエリアで絞り込んで大阪のワールドグルメを発見。",
   inLanguage: "ja",
-  keywords: "大阪グルメ,大阪カフェ,大阪ランチ,大阪居酒屋,大阪ラーメン,難波,心斎橋,天満,北新地,福島",
+  keywords: "大阪グルメ,大阪各国料理,大阪イタリアン,大阪中華,大阪韓国料理,大阪エスニック,難波,心斎橋,天満,北新地,福島",
 };
 
 export default function Home() {

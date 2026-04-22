@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <div className="bg-white/90 backdrop-blur-sm shadow-sm px-4 py-3 flex items-center gap-2">
-      <span className="text-xl">🍽</span>
+      <span className="text-xl">🌍</span>
       <h1 className="font-bold text-lg text-gray-800">{t.siteTitle}</h1>
       <span className="text-xs text-gray-500 ml-auto mr-2">{t.tagline}</span>
       <button
