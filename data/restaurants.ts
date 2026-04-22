@@ -66,6 +66,26 @@ export const restaurants: Restaurant[] = [
     ikyuUrl: "",
   },
 
+  // --- @osaka_gourmet_ ---
+  {
+    id: "og-2",
+    name: "自然派ワインBAR PASSE",
+    area: "西区（阿波座）",
+    category: "ワインバー",
+    lat: 34.683762,
+    lng: 135.484676,
+    posts: [
+      {
+        tweetUrl: "https://x.com/osaka_gourmet_/status/2046614781147414784",
+        posterName: "大阪グルメ",
+        posterHandle: "@osaka_gourmet_",
+      },
+    ],
+    gurunaviUrl: "",
+    hotpepperUrl: "",
+    ikyuUrl: "",
+  },
+
   // --- @furan_osakacafe ---
   {
     id: "fc-1",
