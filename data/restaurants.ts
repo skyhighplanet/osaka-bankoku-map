@@ -18,4 +18,24 @@ export type Post = {
   posterHandle: string;
 };
 
-export const restaurants: Restaurant[] = [];
+export const restaurants: Restaurant[] = [
+  {
+    id: "us-1",
+    name: "Old Cairo Cafe",
+    area: "中央区（西心斎橋）",
+    country: "エジプト",
+    category: "エジプト料理",
+    lat: 34.6708,
+    lng: 135.4986,
+    posts: [
+      {
+        tweetUrl: "https://x.com/uramesizesakura/status/2046959879685054476",
+        posterName: "桜-すき好きウラなんば。",
+        posterHandle: "@uramesizesakura",
+      },
+    ],
+    gurunaviUrl: "",
+    hotpepperUrl: "",
+    ikyuUrl: "",
+  },
+];

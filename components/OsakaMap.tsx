@@ -5,7 +5,7 @@ import { setOptions, importLibrary } from "@googlemaps/js-api-loader";
 import { restaurants, Restaurant } from "@/data/restaurants";
 import RestaurantModal from "./RestaurantModal";
 import { useLang } from "@/lib/LanguageContext";
-import { translations, countryTranslations, areaTranslations } from "@/lib/translations";
+import { translations, countryTranslations, countryFlags, areaTranslations } from "@/lib/translations";
 
 const OSAKA_CENTER = { lat: 34.6937, lng: 135.5023 };
 
@@ -57,19 +57,20 @@ export default function OsakaMap() {
       mapInstanceRef.current = map;
 
       restaurants.forEach((restaurant) => {
+        const flag = countryFlags[restaurant.country] ?? "🍽";
         const pinEl = document.createElement("div");
         pinEl.innerHTML = `
           <div style="
-            background:#2563eb;
-            color:white;
+            background:white;
+            border:2px solid #2563eb;
             border-radius:50% 50% 50% 0;
             width:36px;height:36px;
             display:flex;align-items:center;justify-content:center;
             transform:rotate(-45deg);
-            box-shadow:0 2px 6px rgba(0,0,0,0.3);
+            box-shadow:0 2px 6px rgba(0,0,0,0.25);
             cursor:pointer;
           ">
-            <span style="transform:rotate(45deg);font-size:18px;">🌍</span>
+            <span style="transform:rotate(45deg);font-size:20px;line-height:1;">${flag}</span>
           </div>
         `;
 

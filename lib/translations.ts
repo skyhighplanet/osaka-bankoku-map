@@ -21,6 +21,26 @@ export const translations = {
   },
 } as const;
 
+export const countryFlags: Record<string, string> = {
+  "日本": "🇯🇵",
+  "中国": "🇨🇳",
+  "韓国": "🇰🇷",
+  "イタリア": "🇮🇹",
+  "フランス": "🇫🇷",
+  "イギリス": "🇬🇧",
+  "アメリカ": "🇺🇸",
+  "インド": "🇮🇳",
+  "タイ": "🇹🇭",
+  "ベトナム": "🇻🇳",
+  "メキシコ": "🇲🇽",
+  "スペイン": "🇪🇸",
+  "ギリシャ": "🇬🇷",
+  "トルコ": "🇹🇷",
+  "エチオピア": "🇪🇹",
+  "ペルー": "🇵🇪",
+  "エジプト": "🇪🇬",
+};
+
 export const countryTranslations: Record<string, string> = {
   "日本": "Japanese",
   "中国": "Chinese",
@@ -38,6 +58,7 @@ export const countryTranslations: Record<string, string> = {
   "トルコ": "Turkish",
   "エチオピア": "Ethiopian",
   "ペルー": "Peruvian",
+  "エジプト": "Egyptian",
 };
 
 export const areaTranslations: Record<string, string> = {
