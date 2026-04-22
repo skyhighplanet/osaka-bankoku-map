@@ -2,6 +2,7 @@ export type Restaurant = {
   id: string;
   name: string;
   area: string;
+  category: string; // 例: "ラーメン" | "カフェ" | "イタリアン" など
   lat: number;
   lng: number;
   posts: Post[];
@@ -30,6 +31,7 @@ export const restaurants: Restaurant[] = [
     id: "og-1",
     name: "生ハムとPIZZA。86ストア",
     area: "中央区（難波）",
+    category: "イタリアン",
     lat: 34.6652,
     lng: 135.5020,
     posts: [
@@ -49,6 +51,7 @@ export const restaurants: Restaurant[] = [
     id: "mg-1",
     name: "中華そば桐麺 総本店",
     area: "淀川区（十三）",
+    category: "ラーメン",
     lat: 34.7224,
     lng: 135.4698,
     posts: [
@@ -68,6 +71,7 @@ export const restaurants: Restaurant[] = [
     id: "fc-1",
     name: "Hobbit's Tea Room",
     area: "中央区（大手前）",
+    category: "カフェ",
     lat: 34.6868,
     lng: 135.5196,
     posts: [

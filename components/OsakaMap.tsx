@@ -7,7 +7,7 @@ import RestaurantModal from "./RestaurantModal";
 
 const OSAKA_CENTER = { lat: 34.6937, lng: 135.5023 };
 
-// "中央区（難波）" → "難波"、括弧なしなら元の文字列をそのまま返す
+// "中央区（難波）" → "難波"、括弧なしならそのまま返す
 function shortArea(area: string): string {
   const match = area.match(/（(.+)）/);
   return match ? match[1] : area;
@@ -20,9 +20,11 @@ export default function OsakaMap() {
 
   const [selected, setSelected] = useState<Restaurant | null>(null);
   const [areaFilter, setAreaFilter] = useState<string>("すべて");
+  const [categoryFilter, setCategoryFilter] = useState<string>("すべて");
 
-  // ユニークエリア一覧
+  // ユニーク一覧
   const areas = ["すべて", ...Array.from(new Set(restaurants.map((r) => r.area)))];
+  const categories = ["すべて", ...Array.from(new Set(restaurants.map((r) => r.category)))];
 
   // マップ初期化（1回のみ）
   useEffect(() => {
@@ -87,34 +89,57 @@ export default function OsakaMap() {
     return () => { cancelled = true; };
   }, []);
 
-  // フィルタ変更時にマーカーを表示/非表示
+  // フィルタ変更時にマーカーを表示/非表示（エリア × カテゴリのAND条件）
   useEffect(() => {
     const map = mapInstanceRef.current;
     markersRef.current.forEach((marker, id) => {
-      const restaurant = restaurants.find((r) => r.id === id);
-      if (!restaurant) return;
-      const visible = areaFilter === "すべて" || restaurant.area === areaFilter;
-      marker.map = visible ? map : null;
+      const r = restaurants.find((r) => r.id === id);
+      if (!r) return;
+      const areaMatch = areaFilter === "すべて" || r.area === areaFilter;
+      const categoryMatch = categoryFilter === "すべて" || r.category === categoryFilter;
+      marker.map = areaMatch && categoryMatch ? map : null;
     });
-  }, [areaFilter]);
+  }, [areaFilter, categoryFilter]);
 
   return (
     <>
-      {/* エリアフィルタバー */}
-      <div className="absolute top-[52px] left-0 right-0 z-10 px-3 py-2 flex gap-2 overflow-x-auto scrollbar-none bg-white/85 backdrop-blur-sm shadow-sm">
-        {areas.map((area) => (
-          <button
-            key={area}
-            onClick={() => setAreaFilter(area)}
-            className={`flex-shrink-0 px-3 py-1 rounded-full text-xs font-medium border transition-colors ${
-              areaFilter === area
-                ? "bg-red-500 text-white border-red-500"
-                : "bg-white text-gray-700 border-gray-300 hover:border-red-400"
-            }`}
-          >
-            {area === "すべて" ? "すべて" : shortArea(area)}
-          </button>
-        ))}
+      {/* フィルタバー（2行） */}
+      <div className="absolute top-[52px] left-0 right-0 z-10 bg-white/85 backdrop-blur-sm shadow-sm">
+        {/* エリアフィルタ */}
+        <div className="px-3 pt-2 pb-1 flex gap-2 overflow-x-auto scrollbar-none">
+          <span className="flex-shrink-0 text-[10px] text-gray-400 self-center pr-1">エリア</span>
+          {areas.map((area) => (
+            <button
+              key={area}
+              onClick={() => setAreaFilter(area)}
+              className={`flex-shrink-0 px-3 py-1 rounded-full text-xs font-medium border transition-colors ${
+                areaFilter === area
+                  ? "bg-red-500 text-white border-red-500"
+                  : "bg-white text-gray-700 border-gray-300 hover:border-red-400"
+              }`}
+            >
+              {area === "すべて" ? "すべて" : shortArea(area)}
+            </button>
+          ))}
+        </div>
+
+        {/* カテゴリフィルタ */}
+        <div className="px-3 pb-2 flex gap-2 overflow-x-auto scrollbar-none">
+          <span className="flex-shrink-0 text-[10px] text-gray-400 self-center pr-1">種別</span>
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setCategoryFilter(cat)}
+              className={`flex-shrink-0 px-3 py-1 rounded-full text-xs font-medium border transition-colors ${
+                categoryFilter === cat
+                  ? "bg-orange-500 text-white border-orange-500"
+                  : "bg-white text-gray-700 border-gray-300 hover:border-orange-400"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div ref={mapRef} className="w-full h-full" />
