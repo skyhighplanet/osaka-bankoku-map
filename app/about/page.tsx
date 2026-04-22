@@ -33,10 +33,17 @@ export default function AboutPage() {
         <h2 className="text-lg font-semibold mt-6">運営者</h2>
         <dl className="grid grid-cols-[120px_1fr] gap-y-2 border-t pt-3">
           <dt className="font-medium text-gray-600">運営者名</dt>
-          <dd>skyhighplanet</dd>
+          <dd>わう</dd>
           <dt className="font-medium text-gray-600">お問い合わせ</dt>
-          <dd className="break-all">skyhighplanet[at]gmail.com<br />
-            <span className="text-xs text-gray-500">（[at]を@に置き換えてご連絡ください）</span>
+          <dd>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSctMc-aouBSWyQFM9RFdcGavtJpCR7kJ-uW9KZkrhZxucYy5w/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              お問い合わせフォーム
+            </a>
           </dd>
         </dl>
 
