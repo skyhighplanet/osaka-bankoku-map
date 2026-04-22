@@ -146,6 +146,26 @@ export const restaurants: Restaurant[] = [
     ikyuUrl: "",
   },
 
+  // --- @kyari_gourmet ---
+  {
+    id: "kg-1",
+    name: "酒場音色",
+    area: "中央区（心斎橋）",
+    category: "居酒屋",
+    lat: 34.672264,
+    lng: 135.501822,
+    posts: [
+      {
+        tweetUrl: "https://x.com/kyari_gourmet/status/2046841391305936969",
+        posterName: "kyari_gourmet",
+        posterHandle: "@kyari_gourmet",
+      },
+    ],
+    gurunaviUrl: "",
+    hotpepperUrl: "",
+    ikyuUrl: "",
+  },
+
   // --- @umedakeizai (もろみ庵 住所調査中) ---
 
   // --- @uzami_chan_ ---
