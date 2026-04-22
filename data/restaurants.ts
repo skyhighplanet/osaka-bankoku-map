@@ -166,7 +166,25 @@ export const restaurants: Restaurant[] = [
     ikyuUrl: "",
   },
 
-  // --- @umedakeizai (もろみ庵 住所調査中) ---
+  // --- @umedakeizai ---
+  {
+    id: "ume-1",
+    name: "発酵旬菜 もろみ庵",
+    area: "福島区（福島）",
+    category: "居酒屋",
+    lat: 34.697285,
+    lng: 135.486360,
+    posts: [
+      {
+        tweetUrl: "https://x.com/umedakeizai/status/2046864295020093718",
+        posterName: "umedakeizai",
+        posterHandle: "@umedakeizai",
+      },
+    ],
+    gurunaviUrl: "",
+    hotpepperUrl: "",
+    ikyuUrl: "",
+  },
 
   // --- @uzami_chan_ ---
   {
