@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { setOptions, importLibrary } from "@googlemaps/js-api-loader";
 import { restaurants, Restaurant } from "@/data/restaurants";
 import RestaurantModal from "./RestaurantModal";
+import { useLang } from "@/lib/LanguageContext";
+import { translations, categoryTranslations, areaTranslations } from "@/lib/translations";
 
 const OSAKA_CENTER = { lat: 34.6937, lng: 135.5023 };
 
@@ -18,13 +20,16 @@ export default function OsakaMap() {
   const mapInstanceRef = useRef<google.maps.Map | null>(null);
   const markersRef = useRef<Map<string, google.maps.marker.AdvancedMarkerElement>>(new Map());
 
-  const [selected, setSelected] = useState<Restaurant | null>(null);
-  const [areaFilter, setAreaFilter] = useState<string>("すべて");
-  const [categoryFilter, setCategoryFilter] = useState<string>("すべて");
+  const { lang } = useLang();
+  const t = translations[lang];
 
-  // ユニーク一覧
-  const areas = ["すべて", ...Array.from(new Set(restaurants.map((r) => r.area)))];
-  const categories = ["すべて", ...Array.from(new Set(restaurants.map((r) => r.category)))];
+  const [selected, setSelected] = useState<Restaurant | null>(null);
+  const [areaFilter, setAreaFilter] = useState<string>("all");
+  const [categoryFilter, setCategoryFilter] = useState<string>("all");
+
+  // ユニーク一覧（内部キーは日本語で保持）
+  const areas = Array.from(new Set(restaurants.map((r) => r.area)));
+  const categories = Array.from(new Set(restaurants.map((r) => r.category)));
 
   // マップ初期化（1回のみ）
   useEffect(() => {
@@ -95,8 +100,8 @@ export default function OsakaMap() {
     markersRef.current.forEach((marker, id) => {
       const r = restaurants.find((r) => r.id === id);
       if (!r) return;
-      const areaMatch = areaFilter === "すべて" || r.area === areaFilter;
-      const categoryMatch = categoryFilter === "すべて" || r.category === categoryFilter;
+      const areaMatch = areaFilter === "all" || r.area === areaFilter;
+      const categoryMatch = categoryFilter === "all" || r.category === categoryFilter;
       marker.map = areaMatch && categoryMatch ? map : null;
     });
   }, [areaFilter, categoryFilter]);
@@ -107,7 +112,18 @@ export default function OsakaMap() {
       <div className="absolute top-[52px] left-0 right-0 z-10 bg-white/85 backdrop-blur-sm shadow-sm">
         {/* エリアフィルタ */}
         <div className="px-3 pt-2 pb-1 flex gap-2 overflow-x-auto scrollbar-none">
-          <span className="flex-shrink-0 text-[10px] text-gray-400 self-center pr-1">エリア</span>
+          <span className="flex-shrink-0 text-[10px] text-gray-400 self-center pr-1">{t.areaLabel}</span>
+          {/* 「すべて」ボタン */}
+          <button
+            onClick={() => setAreaFilter("all")}
+            className={`flex-shrink-0 px-3 py-1 rounded-full text-xs font-medium border transition-colors ${
+              areaFilter === "all"
+                ? "bg-red-500 text-white border-red-500"
+                : "bg-white text-gray-700 border-gray-300 hover:border-red-400"
+            }`}
+          >
+            {t.all}
+          </button>
           {areas.map((area) => (
             <button
               key={area}
@@ -118,14 +134,25 @@ export default function OsakaMap() {
                   : "bg-white text-gray-700 border-gray-300 hover:border-red-400"
               }`}
             >
-              {area === "すべて" ? "すべて" : shortArea(area)}
+              {lang === "en" ? (areaTranslations[area] ?? shortArea(area)) : shortArea(area)}
             </button>
           ))}
         </div>
 
         {/* カテゴリフィルタ */}
         <div className="px-3 pb-2 flex gap-2 overflow-x-auto scrollbar-none">
-          <span className="flex-shrink-0 text-[10px] text-gray-400 self-center pr-1">種別</span>
+          <span className="flex-shrink-0 text-[10px] text-gray-400 self-center pr-1">{t.categoryLabel}</span>
+          {/* 「すべて」ボタン */}
+          <button
+            onClick={() => setCategoryFilter("all")}
+            className={`flex-shrink-0 px-3 py-1 rounded-full text-xs font-medium border transition-colors ${
+              categoryFilter === "all"
+                ? "bg-orange-500 text-white border-orange-500"
+                : "bg-white text-gray-700 border-gray-300 hover:border-orange-400"
+            }`}
+          >
+            {t.all}
+          </button>
           {categories.map((cat) => (
             <button
               key={cat}
@@ -136,7 +163,7 @@ export default function OsakaMap() {
                   : "bg-white text-gray-700 border-gray-300 hover:border-orange-400"
               }`}
             >
-              {cat}
+              {lang === "en" ? (categoryTranslations[cat] ?? cat) : cat}
             </button>
           ))}
         </div>

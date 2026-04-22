@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import { Restaurant } from "@/data/restaurants";
+import { useLang } from "@/lib/LanguageContext";
+import { translations, areaTranslations } from "@/lib/translations";
 
 type Props = {
   restaurant: Restaurant;
@@ -76,6 +78,9 @@ function TweetEmbed({ tweetUrl, containerId }: { tweetUrl: string; containerId: 
 }
 
 export default function RestaurantModal({ restaurant, onClose }: Props) {
+  const { lang } = useLang();
+  const t = translations[lang];
+
   const reservationLinks = [
     { site: RESERVATION_SITES[0], url: restaurant.gurunaviUrl },
     { site: RESERVATION_SITES[1], url: restaurant.hotpepperUrl },
@@ -96,7 +101,9 @@ export default function RestaurantModal({ restaurant, onClose }: Props) {
         <div className="flex items-center justify-between p-4 border-b sticky top-0 bg-white rounded-t-2xl">
           <div>
             <h2 className="font-bold text-lg leading-tight">{restaurant.name}</h2>
-            <p className="text-sm text-gray-500">{restaurant.area}</p>
+            <p className="text-sm text-gray-500">
+              {lang === "en" ? (areaTranslations[restaurant.area] ?? restaurant.area) : restaurant.area}
+            </p>
           </div>
           <button
             onClick={onClose}
@@ -120,7 +127,7 @@ export default function RestaurantModal({ restaurant, onClose }: Props) {
         {/* 予約ボタン */}
         {reservationLinks.length > 0 ? (
           <div className="px-4 pb-6">
-            <p className="text-xs text-gray-500 mb-2">予約はこちら</p>
+            <p className="text-xs text-gray-500 mb-2">{t.reservation}</p>
             <div className="flex gap-3 flex-wrap">
               {reservationLinks.map(({ site, url }) => (
                 <a
@@ -145,7 +152,7 @@ export default function RestaurantModal({ restaurant, onClose }: Props) {
           </div>
         ) : (
           <div className="px-4 pb-6">
-            <p className="text-xs text-gray-400">予約リンク準備中</p>
+            <p className="text-xs text-gray-400">{t.reservationPending}</p>
           </div>
         )}
       </div>
