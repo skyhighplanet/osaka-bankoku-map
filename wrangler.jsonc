@@ -1,0 +1,8 @@
+{
+  "name": "osaka-kuidaore-map",
+  "compatibility_date": "2025-04-22",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "single-page-application"
+  }
+}
