@@ -246,6 +246,26 @@ export const restaurants: Restaurant[] = [
     ikyuUrl: "",
   },
 
+  // --- @yk_mg18 ---
+  {
+    id: "yk-1",
+    name: "291010（にくじゅうじゅう）",
+    area: "北区（天満）",
+    category: "焼肉",
+    lat: 34.70648,
+    lng: 135.509424,
+    posts: [
+      {
+        tweetUrl: "https://x.com/yk_mg18/status/2046910216399475095",
+        posterName: "yk_mg18",
+        posterHandle: "@yk_mg18",
+      },
+    ],
+    gurunaviUrl: "",
+    hotpepperUrl: "",
+    ikyuUrl: "",
+  },
+
   // --- @furan_osakacafe ---
   {
     id: "fc-1",

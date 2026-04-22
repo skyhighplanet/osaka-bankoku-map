@@ -30,6 +30,7 @@ export const categoryTranslations: Record<string, string> = {
   "創作料理": "Creative Cuisine",
   "火鍋": "Hot Pot",
   "居酒屋": "Izakaya",
+  "焼肉": "Yakiniku",
   "ブックカフェ": "Book Cafe",
 };
 
@@ -41,6 +42,7 @@ export const areaTranslations: Record<string, string> = {
   "中央区（本町）": "Hommachi",
   "東住吉区（駒川中野）": "Komagawa-Nakano",
   "西区（西大橋）": "Nishiohashi",
+  "北区（天満）": "Tenma",
   "北区（北新地）": "Kitashinchi",
   "阿倍野区（天王寺）": "Tennoji",
   "中央区（心斎橋）": "Shinsaibashi",
