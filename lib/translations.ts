@@ -31,7 +31,6 @@ export const categoryTranslations: Record<string, string> = {
   "火鍋": "Hot Pot",
   "居酒屋": "Izakaya",
   "ブックカフェ": "Book Cafe",
-  "京都": "Kyoto",
 };
 
 export const areaTranslations: Record<string, string> = {
@@ -46,6 +45,4 @@ export const areaTranslations: Record<string, string> = {
   "阿倍野区（天王寺）": "Tennoji",
   "中央区（心斎橋）": "Shinsaibashi",
   "福島区（福島）": "Fukushima",
-  "京都府（中京区）": "Kyoto (Nakagyo)",
-  "京都府（上京区）": "Kyoto (Kamigyo)",
 };

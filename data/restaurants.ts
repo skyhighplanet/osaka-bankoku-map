@@ -186,26 +186,6 @@ export const restaurants: Restaurant[] = [
     ikyuUrl: "",
   },
 
-  // --- @uzami_chan_ ---
-  {
-    id: "uz-1",
-    name: "ARCHI coffee and wine",
-    area: "京都府（中京区）",
-    category: "京都",
-    lat: 35.001858,
-    lng: 135.740672,
-    posts: [
-      {
-        tweetUrl: "https://x.com/uzami_chan_/status/2046891925597519913",
-        posterName: "uzami_chan_",
-        posterHandle: "@uzami_chan_",
-      },
-    ],
-    gurunaviUrl: "",
-    hotpepperUrl: "",
-    ikyuUrl: "",
-  },
-
   // --- @crew_value1 ---
   {
     id: "cv-2",
@@ -219,26 +199,6 @@ export const restaurants: Restaurant[] = [
         tweetUrl: "https://x.com/crew_value1/status/2046883025149960467",
         posterName: "crew_value1",
         posterHandle: "@crew_value1",
-      },
-    ],
-    gurunaviUrl: "",
-    hotpepperUrl: "",
-    ikyuUrl: "",
-  },
-
-  // --- @HALdesu1111 ---
-  {
-    id: "hal-1",
-    name: "天ぷらのご縁",
-    area: "京都府（上京区）",
-    category: "京都",
-    lat: 35.018428,
-    lng: 135.757125,
-    posts: [
-      {
-        tweetUrl: "https://x.com/HALdesu1111/status/2046891870866026704",
-        posterName: "HALdesu1111",
-        posterHandle: "@HALdesu1111",
       },
     ],
     gurunaviUrl: "",
