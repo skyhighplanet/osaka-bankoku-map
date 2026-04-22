@@ -130,7 +130,7 @@ export default function OsakaMap() {
                   : "bg-white text-gray-700 border-gray-300 hover:border-blue-400"
               }`}
             >
-              {lang === "en" ? (countryTranslations[country] ?? country) : country}
+              {countryFlags[country] ?? ""} {lang === "en" ? (countryTranslations[country] ?? country) : country}
             </button>
           ))}
         </div>
