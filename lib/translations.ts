@@ -2,7 +2,7 @@ export type Language = "ja" | "en";
 
 export const translations = {
   ja: {
-    siteTitle: "大阪くいだおれMAP",
+    siteTitle: "大阪くいだおれマップ",
     tagline: "ピンをタップして詳細を見る",
     areaLabel: "エリア",
     categoryLabel: "種別",
