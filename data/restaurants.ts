@@ -126,6 +126,88 @@ export const restaurants: Restaurant[] = [
     ikyuUrl: "",
   },
 
+  // --- @h_gashiyama ---
+  {
+    id: "hg-1",
+    name: "北新地ひなべ ぺんぎん",
+    area: "北区（北新地）",
+    category: "火鍋",
+    lat: 34.696379,
+    lng: 135.498201,
+    posts: [
+      {
+        tweetUrl: "https://x.com/h_gashiyama/status/2046873810293690505",
+        posterName: "h_gashiyama",
+        posterHandle: "@h_gashiyama",
+      },
+    ],
+    gurunaviUrl: "",
+    hotpepperUrl: "",
+    ikyuUrl: "",
+  },
+
+  // --- @umedakeizai (もろみ庵 住所調査中) ---
+
+  // --- @uzami_chan_ ---
+  {
+    id: "uz-1",
+    name: "ARCHI coffee and wine",
+    area: "京都府（中京区）",
+    category: "カフェ",
+    lat: 35.001858,
+    lng: 135.740672,
+    posts: [
+      {
+        tweetUrl: "https://x.com/uzami_chan_/status/2046891925597519913",
+        posterName: "uzami_chan_",
+        posterHandle: "@uzami_chan_",
+      },
+    ],
+    gurunaviUrl: "",
+    hotpepperUrl: "",
+    ikyuUrl: "",
+  },
+
+  // --- @crew_value1 ---
+  {
+    id: "cv-2",
+    name: "あべの酒場",
+    area: "阿倍野区（天王寺）",
+    category: "居酒屋",
+    lat: 34.646517,
+    lng: 135.510906,
+    posts: [
+      {
+        tweetUrl: "https://x.com/crew_value1/status/2046883025149960467",
+        posterName: "crew_value1",
+        posterHandle: "@crew_value1",
+      },
+    ],
+    gurunaviUrl: "",
+    hotpepperUrl: "",
+    ikyuUrl: "",
+  },
+
+  // --- @HALdesu1111 ---
+  {
+    id: "hal-1",
+    name: "天ぷらのご縁",
+    area: "京都府（上京区）",
+    category: "天ぷら",
+    lat: 35.018428,
+    lng: 135.757125,
+    posts: [
+      {
+        tweetUrl: "https://x.com/HALdesu1111/status/2046891870866026704",
+        posterName: "HALdesu1111",
+        posterHandle: "@HALdesu1111",
+      },
+    ],
+    gurunaviUrl: "",
+    hotpepperUrl: "",
+    ikyuUrl: "",
+  },
+
   // --- @cafe__xx__ ---
   {
     id: "cx-1",
