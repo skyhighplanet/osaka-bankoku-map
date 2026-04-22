@@ -86,6 +86,46 @@ export const restaurants: Restaurant[] = [
     ikyuUrl: "",
   },
 
+  // --- @tabichef ---
+  {
+    id: "tc-1",
+    name: "またぐ",
+    area: "西区（西大橋）",
+    category: "創作料理",
+    lat: 34.678904,
+    lng: 135.495336,
+    posts: [
+      {
+        tweetUrl: "https://x.com/tabichef/status/2046831984094347444",
+        posterName: "tabichef",
+        posterHandle: "@tabichef",
+      },
+    ],
+    gurunaviUrl: "",
+    hotpepperUrl: "",
+    ikyuUrl: "",
+  },
+
+  // --- @enseimeshi ---
+  {
+    id: "em-1",
+    name: "422 BOOKCAFE & BAR",
+    area: "中央区（本町）",
+    category: "カフェ",
+    lat: 34.686749,
+    lng: 135.499560,
+    posts: [
+      {
+        tweetUrl: "https://x.com/enseimeshi/status/2046515172668477498",
+        posterName: "enseimeshi",
+        posterHandle: "@enseimeshi",
+      },
+    ],
+    gurunaviUrl: "",
+    hotpepperUrl: "",
+    ikyuUrl: "",
+  },
+
   // --- @cafe__xx__ ---
   {
     id: "cx-1",
