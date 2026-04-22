@@ -191,7 +191,7 @@ export const restaurants: Restaurant[] = [
     id: "uz-1",
     name: "ARCHI coffee and wine",
     area: "京都府（中京区）",
-    category: "カフェ",
+    category: "京都",
     lat: 35.001858,
     lng: 135.740672,
     posts: [
@@ -231,7 +231,7 @@ export const restaurants: Restaurant[] = [
     id: "hal-1",
     name: "天ぷらのご縁",
     area: "京都府（上京区）",
-    category: "天ぷら",
+    category: "京都",
     lat: 35.018428,
     lng: 135.757125,
     posts: [

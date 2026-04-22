@@ -30,8 +30,8 @@ export const categoryTranslations: Record<string, string> = {
   "創作料理": "Creative Cuisine",
   "火鍋": "Hot Pot",
   "居酒屋": "Izakaya",
-  "天ぷら": "Tempura",
   "ブックカフェ": "Book Cafe",
+  "京都": "Kyoto",
 };
 
 export const areaTranslations: Record<string, string> = {
